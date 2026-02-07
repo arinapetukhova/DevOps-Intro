@@ -192,5 +192,60 @@ arinapetuhova@MacBook-Air-Arina DevOps-Intro % git log --oneline --graph --all
 **Reflection:** the graph visualization provides insight into branch relationships and development flow. It clearly shows where branches diverge (at commit 736f6df for side-branch) and reveals that feature/lab1 stopped development while feature/lab2 continued, helping understand the project's evolution at a glance.
 
 ## Task 4: Tagging Commits
+### Tag names and commands used:
+**For the first tag:**
+```
+arinapetuhova@MacBook-Air-Arina DevOps-Intro % git tag v1.0.0
+arinapetuhova@MacBook-Air-Arina DevOps-Intro % git push origin v1.0.0 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.13 KiB | 1.13 MiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/arinapetukhova/DevOps-Intro.git
+ * [new tag]         v1.0.0 -> v1.0.0
+```
+
+**For the second tag:**
+```
+arinapetuhova@MacBook-Air-Arina DevOps-Intro % git tag v1.1.0
+arinapetuhova@MacBook-Air-Arina DevOps-Intro % git push origin v1.1.0
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 619 bytes | 619.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/arinapetukhova/DevOps-Intro.git
+ * [new tag]         v1.1.0 -> v1.1.0
+```
+
+### Associated commit hashes:
+```
+arinapetuhova@MacBook-Air-Arina DevOps-Intro % git show v1.0.0 --quiet
+commit dca8922603375fbf462fbd9cbc91ca01d529ae71 (tag: v1.0.0)
+Author: Arina Petuhova <119685834+arinapetukhova@users.noreply.github.com>
+Date:   Sat Feb 7 15:00:16 2026 +0300
+
+    task 3 & 4
+arinapetuhova@MacBook-Air-Arina DevOps-Intro % git show v1.1.0 --quiet
+commit aedb4327ac1872dfb768603aaae29483bbc5994e (HEAD -> feature/lab2, tag: v1.1.0)
+Author: Arina Petuhova <119685834+arinapetukhova@users.noreply.github.com>
+Date:   Sat Feb 7 15:07:34 2026 +0300
+
+    new tag
+```
+
+### Why tags matter:
+1. Versioning: Tags provide immutable reference points for specific releases, enabling precise version tracking and rollback capabilities.
+
+2. CI/CD Triggers: Automated pipelines can be configured to deploy or test only when specific tags are pushed (e.g., v1.* triggers production deployment).
+
+3. Release Management: Tags create GitHub releases with downloadable source code, changelogs, and binary assets, facilitating organized software distribution.
+
 ## Task 5: git switch vs git checkout vs git restore
+
 ## Task 6: GitHub Community Engagement
