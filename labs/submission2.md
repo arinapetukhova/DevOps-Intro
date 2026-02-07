@@ -177,7 +177,7 @@ arinapetuhova@MacBook-Air-Arina DevOps-Intro % git log --oneline --graph --all
 * 0f2867f verified commit
 ```
 
-***Commit messages list:*** 
+**Commit messages list:**
 - verified commit, 
 - feat: SSH screenshots added, 
 - remove screenshots folder, 
