@@ -30,6 +30,36 @@ on:
   workflow_dispatch:
 ```
 
+System information collection step was added, as well:
+```
+- name: Gather system information
+  run: |
+    echo "## System Information" 
+    echo "### Operating System Details"
+    cat /etc/os-release
+    echo ""
+    echo "### CPU Information"
+    lscpu | grep "Model name\|CPU(s)"
+    echo ""
+    echo "### Memory Information"
+    free -h
+    echo ""
+    echo "### Disk Information"
+    df -h
+    echo ""
+    echo "### Kernel Version"
+    uname -a
+    echo ""
+    echo "### Who am I"
+    whoami
+    echo ""
+    echo "### Current Directory"
+    pwd
+    echo ""
+    echo "### Environment Variables"
+    env | sort
+```
+
 ### Gathered system information from runner:
 The runner is an Ubuntu 24.04.3 LTS virtual machine hosted on Azure, running Linux kernel 6.14.0-1017-azure. Hardware includes an AMD EPYC 7763 processor with 4 CPU cores, 15GB RAM (plus 3GB of swap space), and 145GB storage with 92GB free. The repository is cloned to /home/runner/work/DevOps-Intro/DevOps-Intro under the "runner" user account.
 
