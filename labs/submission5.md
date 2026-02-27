@@ -4,6 +4,7 @@
 macOS Tahoe 26.3
 #### VirtualBox version number:
 Version 7.2.6 r172322 (Qt6.8.0 on cocoa)
+
 No installation issues were encountered.
 
 ## Task 2: Ubuntu VM and System Analysis
