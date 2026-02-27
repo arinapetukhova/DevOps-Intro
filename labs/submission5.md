@@ -2,7 +2,8 @@
 ## Task 1: VirtualBox Installation
 #### Host operating system and version:
 macOS Tahoe 26.3
-#### VirtualBox version number: Version 7.2.6 r172322 (Qt6.8.0 on cocoa)
+#### VirtualBox version number:
+Version 7.2.6 r172322 (Qt6.8.0 on cocoa)
 No installation issues were encountered.
 
 ## Task 2: Ubuntu VM and System Analysis
@@ -10,7 +11,7 @@ VirtualBox didn't work for me with Ubuntu 24.04, so I used UTM as a virtual mach
 
 **VM configuration:** 4GB RAM, 64GB storage, 4 CPU cores
 
-#### CPU Details:
+### CPU Details:
 **Tools discovered:** `lscpu`, `/proc/cpuinfo`, `nproc`
 
 **Output:**
@@ -91,7 +92,7 @@ CPU part	: 0x000
 CPU revision	: 0
 ```
 
-#### Memory Information:
+### Memory Information:
 **Tools discovered:** `free`, `/proc/meminfo`, `vmstat`
 
 **Output:**
@@ -161,7 +162,7 @@ Hugepagesize:       2048 kB
 Hugetlb:               0 kB
 ```
 
-#### Network Configuration:
+### Network Configuration:
 **Tools discovered:** `ip`
 
 **Output:**
@@ -185,7 +186,7 @@ arina_os@arinaos:~$ ip a
        valid_lft forever preferred_lft forever
 ```
 
-#### Storage Information:
+### Storage Information:
 **Tools discovered:** `df`, `lsblk`
 
 **Output:**
@@ -221,7 +222,7 @@ vda                       253:0    0    64G  0 disk
   \u2514\u2500ubuntu--vg-ubuntu--lv 252:0    0  30.5G  0 lvm  /
 ```
 
-#### Operating System:
+### Operating System:
 **Tools discovered:** `uname`, `hostnamectl`
 
 **Output:**
@@ -245,7 +246,7 @@ Firmware Version: 0.0.0
     Firmware Age: 11y 3w 1d         
 ```
 
-#### Virtualization Detection:
+### Virtualization Detection:
 **Tools discovered:** `systemd-detect-virt`, `lshw`
 
 **Output:**
